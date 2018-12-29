@@ -7,7 +7,7 @@ class App extends Component {
     this.state = { 
       tasks: ['Sacar la ropa', 'Hacer la cama', 'Leer un rato'], 
       newTask: '' 
-     } 
+     }
    } 
  
    render() { 
@@ -33,16 +33,16 @@ class App extends Component {
      ) 
    }
 
-   addNewTask (event) { 
-     this.setState({ 
-       newTask: event.target.value, 
-       newTask: '' 
-     }) 
+   addNewTask(event) { 
+       this.setState({ 
+         newTask: event.target.value, 
+         newTask: '' 
+       }) 
    } 
 
    handleKeyPress = (event) => { 
       if(event.key == 'Enter'){
-          event.preventDefault() 
+          event.preventDefault();
           let oldTasks = this.state.tasks 
           let newTask = this.state.newTask 
           this.setState({ 
