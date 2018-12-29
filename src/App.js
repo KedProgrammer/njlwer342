@@ -20,8 +20,13 @@ class App extends Component {
                  <li key={index}>{LaTarea}</li> 
                )} 
            </ul> 
-              <form onSubmit={this.handleSubmit}> 
-                <input type="text" id="new-task" value={this.state.newTask} onChange={this.addNewTask.bind(this)} placeholder="Ingresa una tarea y oprime Enter" /> 
+              <form onKeyPress={this.handleKeyPress}> 
+                <input 
+                  type="text" 
+                  id="new-task" 
+                  value={this.state.newTask} 
+                  onChange={this.addNewTask.bind(this)} 
+                  placeholder="Ingresa una tarea y oprime Enter" /> 
               </form> 
          </div> 
        </div> 
@@ -35,14 +40,16 @@ class App extends Component {
      }) 
    } 
 
-   handleSubmit = (e) => { 
-     e.preventDefault() 
-     let oldTasks = this.state.tasks 
-     let newTask = this.state.newTask 
-     this.setState({ 
-       tasks: [...oldTasks, newTask], 
-       newTask: '' 
-     }) 
-   } 
+   handleKeyPress = (event) => { 
+      if(event.key == 'Enter'){
+          event.preventDefault() 
+          let oldTasks = this.state.tasks 
+          let newTask = this.state.newTask 
+          this.setState({ 
+             tasks: [...oldTasks, newTask], 
+             newTask: '' 
+          }) 
+      } 
+   }
  } 
 export default App; 
