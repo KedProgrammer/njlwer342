@@ -34,22 +34,19 @@ class App extends Component {
    }
 
    addNewTask(event) { 
-         event.preventDefault();
-         this.setState({ 
-         newTask: event.target.value
-        }) 
+       this.setState({ 
+       newTask: event.target.value
+     }) 
    } 
 
    handleKeyPress = (event) => { 
-      if(event.key == 'Enter'){
-          event.preventDefault();
-          let oldTasks = this.state.tasks 
-          let newTask = this.state.newTask 
-          this.setState({ 
-             tasks: [...oldTasks, newTask], 
-             newTask: '' 
-          }) 
-      } 
+       event.preventDefault();
+       let oldTasks = this.state.tasks 
+       let newTask = this.state.newTask 
+       this.setState({ 
+           tasks: [...oldTasks, newTask], 
+           newTask: '' 
+       }) 
    }
  } 
 export default App; 
