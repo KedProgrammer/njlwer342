@@ -4,7 +4,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      tasks: ['sacar la ropa', 'hacer la cama', 'leer un rato'],
+      tasks: ['Sacar la ropa', 'Hacer la cama', 'Leer un rato'],
       newTask: ''
     }
   }
