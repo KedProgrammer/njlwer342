@@ -34,14 +34,10 @@ class App extends Component {
    }
 
    addNewTask(event) { 
-      if (event.keyCode === 13) {
          event.preventDefault();
          this.setState({ 
-         newTask: event.target.value, 
-         newTask: '' 
-       }) 
-   }
-   
+         newTask: event.target.value
+        }) 
    } 
 
    handleKeyPress = (event) => { 
