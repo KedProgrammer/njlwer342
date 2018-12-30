@@ -1,11 +1,12 @@
 import React, { Component } from 'react'; 
 
+
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      tasks: ['Sacar la ropa', 'Hacer la cama', 'Leer un rato'],
-      newTask: '' 
+      tasks: ['sacar la ropa', 'hacer la cama', 'leer un rato'],
+      newTask: ''
     }
   }
   addTask(event) {
@@ -14,7 +15,7 @@ class App extends Component {
     let newTask = this.state.newTask
     this.setState({
       tasks: [...oldTasks, newTask],
-      newTask: '' 
+      newTask: ''
     })
   }
   updateTask(event) {
@@ -38,5 +39,6 @@ class App extends Component {
     )
   }
 }
+
 
 export default App; 
