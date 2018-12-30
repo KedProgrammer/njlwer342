@@ -5,7 +5,7 @@ class App extends Component {
     super()
     this.state = {
       tasks: ['Sacar la ropa', 'Hacer la cama', 'Leer un rato'],
-      newTask: ''
+      newTask: "" 
     }
   }
   addTask(event) {
@@ -14,7 +14,7 @@ class App extends Component {
     let newTask = this.state.newTask
     this.setState({
       tasks: [...oldTasks, newTask],
-      newTask: ''
+      newTask: "" 
     })
   }
   updateTask(event) {
